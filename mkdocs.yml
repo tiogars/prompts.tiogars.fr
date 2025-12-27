@@ -6,6 +6,7 @@ repo_name: tiogars/prompts
 
 theme:
   name: material
+  custom_dir: overrides
   palette:
     - scheme: default
       primary: indigo
@@ -40,3 +41,9 @@ markdown_extensions:
   - pymdownx.details
   - toc:
       permalink: true
+
+extra_javascript:
+  - javascripts/adsense-modal.js
+
+extra_css:
+  - stylesheets/adsense-modal.css
