@@ -32,6 +32,10 @@ theme:
 nav:
   - Home: index.md
   - Prompts: prompts.md
+  - Documentation & Deployment:
+      - MkDocs with GitHub Pages: prompts/mkdocs-github-pages.md
+  - Infrastructure & DevOps:
+      - GitHub pages and DNS: prompts/github-pages-dns.md
 
 markdown_extensions:
   - admonition
