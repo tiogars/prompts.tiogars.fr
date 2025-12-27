@@ -133,14 +133,3 @@
     min-height: 150px;
   }
 }
-
-/* Dark mode adjustments */
-[data-md-color-scheme="slate"] .adsense-modal-content {
-  background-color: var(--md-default-bg-color);
-  border-color: var(--md-default-fg-color--lighter);
-}
-
-[data-md-color-scheme="slate"] .adsense-ad-placeholder {
-  background-color: var(--md-code-bg-color);
-  border-color: var(--md-default-fg-color--lighter);
-}

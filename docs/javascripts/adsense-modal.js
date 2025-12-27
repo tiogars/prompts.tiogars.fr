@@ -11,6 +11,14 @@
   let canCloseModal = false;
   let countdownInterval = null;
 
+  // Clear countdown interval
+  function clearCountdown() {
+    if (countdownInterval) {
+      clearInterval(countdownInterval);
+      countdownInterval = null;
+    }
+  }
+
   // Create modal HTML (only once)
   function createModal() {
     // Check if modal already exists
@@ -65,10 +73,7 @@
     if (!modal) return;
 
     // Clear any existing countdown interval
-    if (countdownInterval) {
-      clearInterval(countdownInterval);
-      countdownInterval = null;
-    }
+    clearCountdown();
 
     modal.classList.add('show');
     canCloseModal = false;
@@ -87,8 +92,7 @@
       countdown.textContent = secondsLeft;
       
       if (secondsLeft <= 0) {
-        clearInterval(countdownInterval);
-        countdownInterval = null;
+        clearCountdown();
         enableCloseButton();
       }
     }, 1000);
@@ -109,10 +113,7 @@
     if (!canCloseModal) return;
     
     // Clear countdown interval if still running
-    if (countdownInterval) {
-      clearInterval(countdownInterval);
-      countdownInterval = null;
-    }
+    clearCountdown();
 
     const modal = document.getElementById('adsense-modal');
     if (modal) {
