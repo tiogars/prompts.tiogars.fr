@@ -30,4 +30,4 @@ CNAME "my.website.com" is set and points successfully to GitHub pages.
 Setup website deployed to GitHub pages to use this setting.
 ```
 
-**Use Case:** This prompt sets up the website deployed to GitHub Pages to respond to the defined CNAME domain you have configured.
+**Use Case:** This prompt sets up the website deployed to GitHub Pages to respond to the custom domain you have configured.
