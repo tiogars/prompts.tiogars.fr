@@ -60,6 +60,11 @@
   text-decoration: none;
 }
 
+.adsense-modal-close.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .adsense-modal-body {
   padding: 20px;
   min-height: 250px;
@@ -81,6 +86,12 @@
   color: var(--md-default-fg-color--light, #666);
 }
 
+.adsense-ad-placeholder p {
+  text-align: center;
+  padding: 40px 20px;
+  margin: 0;
+}
+
 .adsense-modal-footer {
   padding: 15px 20px;
   border-top: 1px solid var(--md-default-fg-color--lightest, #e0e0e0);
@@ -91,6 +102,11 @@
   font-size: 14px;
   color: var(--md-default-fg-color--light, #666);
   font-weight: 500;
+  display: none;
+}
+
+#adsense-timer.visible {
+  display: block;
 }
 
 #adsense-countdown {

@@ -27,7 +27,7 @@
           <div class="adsense-modal-body">
             <div class="adsense-ad-placeholder">
               <!-- AdSense ad code will be inserted here -->
-              <p style="text-align: center; padding: 40px 20px;">Advertisement</p>
+              <p>Advertisement</p>
             </div>
           </div>
           <div class="adsense-modal-footer">
@@ -74,9 +74,8 @@
     canCloseModal = false;
     
     // Disable close button initially
-    closeBtn.style.opacity = '0.5';
-    closeBtn.style.cursor = 'not-allowed';
-    timerText.style.display = 'block';
+    closeBtn.classList.add('disabled');
+    timerText.classList.add('visible');
 
     // Reset countdown display
     countdown.textContent = '5';
@@ -101,9 +100,8 @@
     const timerText = document.getElementById('adsense-timer');
     
     canCloseModal = true;
-    closeBtn.style.opacity = '1';
-    closeBtn.style.cursor = 'pointer';
-    timerText.style.display = 'none';
+    closeBtn.classList.remove('disabled');
+    timerText.classList.remove('visible');
   }
 
   // Close modal
