@@ -14,6 +14,10 @@
   justify-content: center;
 }
 
+.adsense-modal.show {
+  display: flex;
+}
+
 .adsense-modal-content {
   background-color: var(--md-default-bg-color, #fff);
   color: var(--md-default-fg-color, #000);

@@ -19,7 +19,7 @@
     }
 
     const modalHTML = `
-      <div id="adsense-modal" class="adsense-modal" style="display: none;">
+      <div id="adsense-modal" class="adsense-modal">
         <div class="adsense-modal-content">
           <div class="adsense-modal-header">
             <span class="adsense-modal-close" id="adsense-close-btn" title="Close">&times;</span>
@@ -70,7 +70,7 @@
       countdownInterval = null;
     }
 
-    modal.style.display = 'flex';
+    modal.classList.add('show');
     canCloseModal = false;
     
     // Disable close button initially
@@ -116,7 +116,7 @@
 
     const modal = document.getElementById('adsense-modal');
     if (modal) {
-      modal.style.display = 'none';
+      modal.classList.remove('show');
     }
   }
 
@@ -125,11 +125,8 @@
     // Create modal on page load
     createModal();
 
-    // Show modal every 5 minutes
+    // Show modal every 5 minutes, starting after the first 5 minutes
     setInterval(showModal, MODAL_INTERVAL);
-    
-    // Show first modal after 5 minutes
-    setTimeout(showModal, MODAL_INTERVAL);
   }
 
   // Initialize when DOM is ready
