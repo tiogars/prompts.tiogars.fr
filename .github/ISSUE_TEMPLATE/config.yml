@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📚 Browse Existing Prompts
+    url: https://tiogars.github.io/prompts/prompts/
+    about: View all available prompts in the documentation
+  - name: 💬 General Discussion
+    url: https://github.com/tiogars/prompts/discussions
+    about: Ask questions or discuss ideas (if discussions are enabled)

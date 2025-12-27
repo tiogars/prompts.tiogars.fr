@@ -1,0 +1,95 @@
+name: 📝 New Prompt Submission
+description: Submit a new prompt to be added to the documentation
+title: "[New Prompt]: "
+labels: ["new-prompt", "documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing a new prompt! Please fill out the information below to help us add your prompt to the documentation.
+        
+  - type: input
+    id: prompt-title
+    attributes:
+      label: Prompt Title
+      description: A short, descriptive title for your prompt
+      placeholder: e.g., "MkDocs with GitHub Pages"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Select the best category for this prompt. This helps organize prompts in the documentation.
+      options:
+        - Documentation & Deployment
+        - Development & Coding
+        - CI/CD & Automation
+        - Testing & Quality
+        - Infrastructure & DevOps
+        - AI & Machine Learning
+        - Web Development
+        - Data Processing
+        - Security
+        - Other (please specify in additional context)
+    validations:
+      required: true
+
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: Add relevant tags separated by commas to help with searchability (e.g., mkdocs, github-pages, documentation)
+      placeholder: "tag1, tag2, tag3"
+    validations:
+      required: true
+
+  - type: textarea
+    id: prompt-content
+    attributes:
+      label: Prompt Content
+      description: The actual prompt text that will be used with GitHub Copilot
+      placeholder: |
+        Make a "MkDocs" website that is built then published to "GitHub Pages" for each commit with a GitHub action.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case / Description
+      description: Explain what this prompt does and when it would be useful
+      placeholder: |
+        This prompt helps you quickly set up a documentation website using MkDocs that automatically builds and deploys to GitHub Pages whenever you push changes to your repository.
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any additional information, examples, or notes about this prompt
+      placeholder: |
+        - Prerequisites needed
+        - Expected output
+        - Related prompts
+        - Any limitations or considerations
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission Checklist
+      description: Please confirm the following before submitting
+      options:
+        - label: I have selected the most appropriate category for this prompt
+          required: true
+        - label: I have added relevant tags for searchability
+          required: true
+        - label: The prompt is clear and provides enough context for GitHub Copilot
+          required: true
+        - label: The use case description explains when and why to use this prompt
+          required: true
