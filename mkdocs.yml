@@ -48,6 +48,8 @@ theme:
 nav:
   - Home: index.md
   - Prompts: prompts.md
+  - Web Development:
+      - Use MUI Speed dial button: prompts/mui-speed-dial.md
   - Documentation & Deployment:
       - MkDocs with GitHub Pages: prompts/mkdocs-github-pages.md
   - Infrastructure & DevOps:
